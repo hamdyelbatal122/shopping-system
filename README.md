@@ -1,4 +1,4 @@
-# E-Commerce-Website-Using-PHP
+# Shop-Website-Using-PHP
 
 ## Platform Used
 ### Front-End
