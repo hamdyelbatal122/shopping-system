@@ -8,7 +8,7 @@
 
 ### Back-End
   (i) PHP <br>
-  (ii) MySQLI <br>
+  (ii) MySQL <br>
 
 ## Key Features
 ### Public User
