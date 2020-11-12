@@ -2,8 +2,14 @@
 <?php
 ob_start();
 session_start();
-
-
+if (!isset($_SESSION['user_login'])) {
+    $user = "";
+} else {
+    $user = $_SESSION['user_login'];
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE id='$user'");
+    $get_user_email = mysqli_fetch_assoc($result);
+    $uname_db = $get_user_email['firstName'];
+}
 if (isset($_REQUEST['keywords'])) {
 
     $epid = mysqli_real_escape_string($conn, $_REQUEST['keywords']);
