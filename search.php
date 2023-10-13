@@ -10,7 +10,17 @@ if (!isset($_SESSION['user_login'])) {
     $get_user_email = mysqli_fetch_assoc($result);
     $uname_db = $get_user_email['firstName'];
 }
+if (isset($_REQUEST['keywords'])) {
 
+    $epid = mysqli_real_escape_string($conn, $_REQUEST['keywords']);
+    if ($epid != "" && ctype_alnum($epid)) {
+
+    } else {
+        header('location: index.php');
+    }
+} else {
+    header('location: index.php');
+}
 
 $search_value = "";
 $search_value = trim($_GET['keywords']);
